@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnMenuQuestions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="menuClick"
+        android:layout_marginTop="16dp"
+        android:text="Questions"
+        app:layout_constraintEnd_toStartOf="@+id/btnMenuSettings"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnMenuSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="menuClick"
+        android:text="Settings"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnMenuQuestions"
+        app:layout_constraintEnd_toStartOf="@+id/btnMenuAbout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnMenuQuestions" />
+
+    <Button
+        android:id="@+id/btnMenuAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="menuClick"
+        android:text="About"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnMenuSettings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnMenuSettings" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMenuSettings">
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
